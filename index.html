@@ -1,129 +1,204 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, intial-state=1.0">
-        <title>Travel Genie</title>
-        <!--font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#080909">
+        <meta name="description" content="Thoughtful travel planning for unforgettable places and meaningful experiences.">
+        <title>Travel Genie — Find your somewhere</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <!---css file link-->
         <link rel="stylesheet" href="css/style.css">
-        <!--js script-->
-        <script src="js/script.js" dref></script>
+        <script src="js/script.js" defer></script>
     </head>
 <body>
-    <!--header section starts-->
     <header class="header">
-        <div id ="menu-btn" class="fa fa-bars"></div> 
-        <a href="#" class="logo"><img src="genie.png">Travel Genie</a>
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#destination">destination</a>
-            <a href="#services">services</a>
-            <a href="#gallery">gallery</a>
-            <a href="#blogs">blogs</a>
+        <a href="#home" class="logo"><img src="genie.png" alt="">Travel<span>Genie</span></a>
+        <button id="menu-btn" class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="navbar" id="site-navigation" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">Our story</a>
+            <a href="#destination">Destinations</a>
+            <a href="#services">Experiences</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#blogs">Journal</a>
         </nav>
-        <a href="#book-form" class="btn">Book Now</a>
+        <a href="#book-form" class="btn header-cta">Plan a trip <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </header>
-    <!--header section ends-->
 
-    <!--home section  starts-->
     <section class="home" id="home">
         <div class="content">
-            <span>follow us</span>
-            <h3>to the unknown</h3>
-            <p>Loreum ipsum</p>
-            <a href='#' class="btn">Book Now</a>
+            <span class="eyebrow"><i class="fa-solid fa-compass" aria-hidden="true"></i> Leave ordinary behind</span>
+            <h1>The world<br>is <em>yours.</em></h1>
+            <p>Faraway places. Open roads. Little moments that turn into the stories you tell forever.</p>
+            <a href="#book-form" class="btn">Choose your somewhere <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="hero-note"><span class="hero-note__avatars" aria-hidden="true"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span><span>Made for the joy of getting lost</span></div>
         </div>
+        <div class="hero-showcase" aria-label="Featured destinations">
+            <div class="showcase-orbit showcase-orbit--outer" aria-hidden="true"></div>
+            <div class="showcase-orbit showcase-orbit--inner" aria-hidden="true"></div>
+            <div class="showcase-globe" aria-hidden="true">
+                <svg viewBox="0 0 400 400" role="presentation">
+                    <defs>
+                        <radialGradient id="globe-ocean" cx="35%" cy="27%" r="75%">
+                            <stop offset="0" stop-color="#78a99b"/>
+                            <stop offset=".52" stop-color="#316d69"/>
+                            <stop offset="1" stop-color="#142e35"/>
+                        </radialGradient>
+                        <linearGradient id="globe-shade" x2=".8" y2="1">
+                            <stop offset=".38" stop-color="#071012" stop-opacity="0"/>
+                            <stop offset="1" stop-color="#04090b" stop-opacity=".76"/>
+                        </linearGradient>
+                        <clipPath id="globe-clip"><circle cx="200" cy="200" r="194"/></clipPath>
+                    </defs>
+                    <circle cx="200" cy="200" r="194" fill="url(#globe-ocean)"/>
+                    <g class="globe-longitudes" clip-path="url(#globe-clip)" fill="none" stroke="#d8e4ce" stroke-opacity=".17">
+                        <ellipse cx="200" cy="200" rx="65" ry="194"/>
+                        <ellipse cx="200" cy="200" rx="128" ry="194"/>
+                        <path d="M7 200h386M24 126h352M24 274h352"/>
+                    </g>
+                    <g class="globe-land" clip-path="url(#globe-clip)" fill="#c6c18b">
+                        <path d="M61 101 78 76l30-16 24 8 13-17 24-9 24 14-5 17 18 11-8 18-30 5-11 18-21 9-6 22-20 9-13-16-17 5-7-15-22-4 6-18-11-12z"/>
+                        <path d="m126 183 17-17 24 7 8 16-12 17-4 24-14 20-4 30-18 41-14-11 3-24-12-22 8-27-8-24 12-20z"/>
+                        <path d="m205 91 28-16 35 5 11 16 25 1 20 18 27 6 14 19-15 13-26-8-14 12-21-7-12 16-27-2-13-19-24 1-10-17-17-5z"/>
+                        <path d="m253 176 25-15 32 10 21 26-2 34-17 19-13 32-18 15-15-19 3-25-16-21 8-28-12-15z"/>
+                        <path d="m66 286 28-7 21 15 18 30-12 28-27-5-21-19-19-5z"/>
+                    </g>
+                    <circle cx="200" cy="200" r="194" fill="url(#globe-shade)"/>
+                    <circle cx="200" cy="200" r="193" fill="none" stroke="#fff" stroke-opacity=".34"/>
+                </svg>
+                <span class="globe-pin"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> SOMEWHERE, EARTH</span>
+            </div>
+            <div class="orbit-ring">
+                <article class="orbit-card" style="--card-index:0">
+                    <img src="images/mald.jpg" alt="">
+                    <span class="orbit-card__place">01 / INDIAN OCEAN</span>
+                    <h2>Maldives</h2>
+                </article>
+                <article class="orbit-card" style="--card-index:1">
+                    <img src="images/japan.jpg" alt="">
+                    <span class="orbit-card__place">02 / EAST ASIA</span>
+                    <h2>Japan</h2>
+                </article>
+                <article class="orbit-card" style="--card-index:2">
+                    <img src="images/london.jpg" alt="">
+                    <span class="orbit-card__place">03 / UNITED KINGDOM</span>
+                    <h2>London</h2>
+                </article>
+                <article class="orbit-card" style="--card-index:3">
+                    <img src="images/dubai.jpg" alt="">
+                    <span class="orbit-card__place">04 / UNITED ARAB EMIRATES</span>
+                    <h2>Dubai</h2>
+                </article>
+                <article class="orbit-card" style="--card-index:4">
+                    <img src="images/qatar.jpg" alt="">
+                    <span class="orbit-card__place">05 / MIDDLE EAST</span>
+                    <h2>Qatar</h2>
+                </article>
+            </div>
+            <span class="showcase-coordinate showcase-coordinate--top" aria-hidden="true">35° 40′ N&nbsp; 139° 45′ E</span>
+            <span class="showcase-coordinate showcase-coordinate--bottom" aria-hidden="true">SOMEWHERE IS CLOSER THAN YOU THINK</span>
+            <div class="showcase-controls" aria-label="Featured destination controls">
+                <button class="showcase-control" type="button" data-direction="-1" aria-label="Previous destination"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                <span class="showcase-count" aria-live="polite"><span class="showcase-current">01</span><span class="showcase-divider">/</span><span>05</span></span>
+                <button class="showcase-control" type="button" data-direction="1" aria-label="Next destination"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <button class="showcase-control showcase-pause" type="button" aria-label="Pause destination rotation"><i class="fa-solid fa-pause" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="hero-caption"><span>TRAVEL, WITH A LITTLE MORE WONDER</span><a href="#about">SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></div>
     </section>  
-    <!--home section ends--> 
 
-<!--booking form section start-->
 <section class="book-form" id="book-form">
-    <form action="">
-        <div class ="inputBox">
-             <span>From</span>
-             <input type="text" placeholder="FROM" value="">
-        </div>
-        <div class ="inputBox">
-            <span>To</span>
-            <input type="text" placeholder="TO" value="">
-       </div>
+    <form action="#destination">
         <div class="inputBox">
-            <span>WHEN</span>
-            <input type="date" placeholder="TO" value="">
+             <label for="origin">Where from?</label>
+             <div class="field"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><input id="origin" name="origin" type="text" placeholder="Your city" autocomplete="address-level2">
+        </div>
         </div>
         <div class="inputBox">
-            <span>Travellers</span>
-            <input type="number" placeholder="Number Of Travelers" value="">
+            <label for="destination-choice">Where to?</label>
+            <div class="field"><i class="fa-solid fa-globe" aria-hidden="true"></i><input id="destination-choice" name="destination" type="text" placeholder="Pick a destination">
         </div>
-        <input type="submit" value="SEARCH" class="btn">
+        </div>
+        <div class="inputBox">
+            <label for="travel-date">When?</label>
+            <div class="field"><i class="fa-regular fa-calendar" aria-hidden="true"></i><input id="travel-date" name="date" type="date">
+        </div>
+        </div>
+        <div class="inputBox">
+            <label for="travellers">Who's coming?</label>
+            <div class="field"><i class="fa-solid fa-user-group" aria-hidden="true"></i><input id="travellers" name="travellers" type="number" min="1" value="2" aria-label="Number of travellers">
+        </div>
+        </div>
+        <button type="submit" class="btn search-btn">Find a trip <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
     </form>
 </section>
-<!--about section starts-->
 <section class="about" id="about">
     <div class="video-container">
-        <video src="images/ao.mp4" muted autoplay loop class="video"></video>
-        <div class="controls">
-            <span class="control-btn" data-src="images/ao.mp4"></span>
-            <span class="control-btn" data-src="images/at.mp4"></span>
-            <span class="control-btn" data-src="images/ath.mp4"></span>
+        <video src="images/ao-web.mp4" poster="images/travel-poster.jpg" muted autoplay loop playsinline preload="metadata" class="video" aria-label="Travel scenery from one of our featured destinations"></video>
+        <div class="controls" aria-label="Choose a featured travel video">
+            <button class="control-btn is-active" type="button" data-src="images/ao-web.mp4" aria-label="Show travel video 1" aria-pressed="true"></button>
+            <button class="control-btn" type="button" data-src="images/at-web.mp4" aria-label="Show travel video 2" aria-pressed="false"></button>
+            <button class="control-btn" type="button" data-src="images/ath-web.mp4" aria-label="Show travel video 3" aria-pressed="false"></button>
         </div>
     </div>
     <div class="content">
-        <span>Why Choose Us?</span>
-        <h3>Loreum ipsum</h3>
-        <p>HEY WELCOME</p>
-        <a href="#" class="btn">read more</a>
+        <span class="eyebrow">A better way to get away</span>
+        <h2>Travel that feels<br>like <em>you.</em></h2>
+        <p>We believe the best trips aren't just about where you go. They're about how it feels to be there. Our local experts and thoughtful planning make every detail feel effortless.</p>
+        <a href="#services" class="text-link">Get to know us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </div>
 </section>
-<!---about section ends-->
 <!---destination section starts-->
 <section class="destination" id="destination">
     <div class="heading">
-        <span>Our destination</span>
-        <h1>make yours destination</h1>
+        <span class="eyebrow">Handpicked for you</span>
+        <h2>Places worth the journey</h2>
+        <p>A few far-flung favourites to get your imagination going.</p>
     </div>
     <div class="box-container">
         <div class="box">
             <div class="image">
-                <img src="images/des.jpg" alt="">
+                <img src="images/des.jpg" alt="A secluded stretch of coastline beneath a dramatic sky">
             </div>
             <div class="content">
-                <h3>tours & travel</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel itaque voluptates sunt dolore unde corrupti ex suscipit fugiat neque autem exercitationem, minus, nesciunt, fugit corporis dolor magnam quam. Illum?</p>
-                <a href="#">Read more <i class="fa-solid fa-chevron-right"></i></a>
+                <h3>Find your kind of adventure</h3>
+                <p>From quiet coastlines to lively city streets, discover a trip that moves at your pace.</p>
+                <a href="#book-form">Explore trips <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="box">
             <div class="image">
-                <img src="images/des2.jpg" alt="">
+                <img src="images/des2.jpg" alt="A warm-toned landscape inviting a scenic journey">
             </div>
             <div class="content">
-                <h3>tours & travel</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel itaque voluptates sunt dolore unde corrupti ex suscipit fugiat neque autem exercitationem, minus, nesciunt, fugit corporis dolor magnam quam. Illum?</p>
-                <a href="#">Read more <i class="fa-solid fa-chevron-right"></i></a>
+                <h3>See the world differently</h3>
+                <p>Meet local makers, find tucked-away spots and experience more than the postcard view.</p>
+                <a href="#book-form">Explore trips <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="box">
             <div class="image">
-                <img src="images/des3.jpg" alt="">
+                <img src="images/des3.jpg" alt="A destination landscape framed by a rocky shoreline">
             </div>
             <div class="content">
-                <h3>tours & travel</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel itaque voluptates sunt dolore unde corrupti ex suscipit fugiat neque autem exercitationem, minus, nesciunt, fugit corporis dolor magnam quam. Illum?</p>
-                <a href="#">Read more <i class="fa-solid fa-chevron-right"></i></a>
+                <h3>Make room for wonder</h3>
+                <p>Take the scenic route with expert guides and thoughtfully made itineraries.</p>
+                <a href="#book-form">Explore trips <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="box">
             <div class="image">
-                <img src="images/des4.jpg" alt="">
+                <img src="images/des4.jpg" alt="A peaceful waterfront view at sunset">
             </div>
             <div class="content">
-                <h3>tours & travel</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel itaque voluptates sunt dolore unde corrupti ex suscipit fugiat neque autem exercitationem, minus, nesciunt, fugit corporis dolor magnam quam. Illum?</p>
-                <a href="#">Read more <i class="fa-solid fa-chevron-right"></i></a>
+                <h3>Travel with a lighter footprint</h3>
+                <p>Stay a little longer, support local communities and leave each place better.</p>
+                <a href="#book-form">Explore trips <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -133,39 +208,40 @@
 <!--services section starts-->
 <section class="services" id="services">
     <div class="heading">
-        <span>Our services</span>
-        <h1>countless experiences</h1>
+        <span class="eyebrow">The good stuff, taken care of</span>
+        <h2>More than just a getaway</h2>
+        <p>Every detail, considered. Every moment, yours.</p>
     </div>
     <div class="box-container">
         <div class="box">
            <i class="fas fa-globe"></i>
-           <h3>worldwide</h3>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+           <h3>Local know-how</h3>
+           <p>Get closer to a place with people who know it best.</p>
         </div>
         <div class="box">
             <i class="fas fa-hiking"></i>
-            <h3>adventure</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            <h3>Made for you</h3>
+            <p>Your pace, your people, your perfect kind of trip.</p>
          </div>
          <div class="box">
             <i class="fas fa-utensils"></i>
-            <h3>food & drinks</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            <h3>Memorable stays</h3>
+            <p>Small, special places with a real sense of somewhere.</p>
          </div>
          <div class="box">
             <i class="fa-solid fa-hotel"></i>
-            <h3>Hotels</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            <h3>Easy planning</h3>
+            <p>Thoughtful itineraries, with the little details sorted.</p>
          </div>
          <div class="box">
             <i class="fas fa-wallet"></i>
-            <h3>Price</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            <h3>Good value</h3>
+            <p>Spend on the moments that make the journey matter.</p>
          </div>
          <div class="box">
             <i class="fas fa-headset"></i>
-            <h3>24/7 Support</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            <h3>Here when you need us</h3>
+            <p>Real help from real people, before and during your trip.</p>
          </div>
     </div>
 
@@ -174,85 +250,87 @@
 <!--gallery section starts-->
 <section class="gallery" id="gallery">
     <div class="heading">
-        <span>Our gallery</span>
-        <h1>make yours destination</h1>
+        <span class="eyebrow">A little inspiration</span>
+        <h2>Postcards from somewhere</h2>
+        <p>Six places. A thousand ways to feel far away.</p>
     </div>
     <div class="box-container">
         <div class="box">
-            <img src="images/london.jpg" alt="">
-            <span>Travel Spot</span>
+            <img src="images/london.jpg" alt="London's Tower Bridge and riverside skyline">
+            <span>United Kingdom</span>
             <h3>London</h3>
         </div>
         <div class="box">
-            <img src="images/america.jpg" alt="">
-            <span>Travel Spot</span>
+            <img src="images/america.jpg" alt="Mount Rushmore in the United States">
+            <span>United States</span>
             <h3>America</h3>
         </div>
         <div class="box">
-            <img src="images/mald.jpg" alt="">
-            <span>Travel Spot</span>
+            <img src="images/mald.jpg" alt="Overwater villas above a turquoise Maldivian lagoon">
+            <span>Indian Ocean</span>
             <h3>Maldives</h3>
         </div>
         <div class="box">
-            <img src="images/dubai.jpg" alt="">
-            <span>Travel Spot</span>
+            <img src="images/dubai.jpg" alt="Dubai's coastline and modern skyline">
+            <span>United Arab Emirates</span>
             <h3>Dubai</h3>
         </div>
         <div class="box">
-            <img src="images/japan.jpg" alt="">
-            <span>Travel Spot</span>
+            <img src="images/japan.jpg" alt="Mount Fuji rising above a Japanese landscape">
+            <span>Japan</span>
             <h3>Japan</h3>
         </div>
         <div class="box">
-            <img src="images/qatar.jpg" alt="">
-            <span>Travel Spot</span>
+            <img src="images/qatar.jpg" alt="The waterfront skyline of Doha, Qatar">
+            <span>Middle East</span>
             <h3>Qatar</h3>
         </div>
     </div>
+</section>
 
-<!--gallery section starts-->
 <section class="blogs" id="blogs">
     <div class="heading">
-        <span>Blogs</span>
-        <h1>make yours destination</h1>        
+        <span class="eyebrow">The travel journal</span>
+        <h2>Stories for the road</h2>
+        <p>Ideas, inspiration and notes from out there.</p>
     </div>
     <div class="box-container">
         <div class="box">
             <div class="image">
-                <img src="images/blog1.png" alt="">
+                <img src="images/blog1.png" alt="A traveller watching hot air balloons rise at sunrise">
             </div>
             <div class="content">
                 <a href="#" class="link">Discover the World, One Step at a Time</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                <p>Slow mornings, bright blue water and the joy of having nowhere else to be.</p>
                 <div class="icon">
-                    <a href="#"><i class="fas fa-clock">12 Mar,2025</i></a>
-                    <a href="#"><i class="fas fa-user"> By Admin</i></a>
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 12 Mar, 2025</span>
+                    <span><i class="fas fa-user" aria-hidden="true"></i> Travel Genie</span>
                 </div>
             </div>
         </div>
         <div class="box">
             <div class="image">
-                <img src="images/blog2.png" alt="">
+                <img src="images/blog2.png" alt="A traveller exploring snowy mountain scenery">
             </div>
             <div class="content">
                 <a href="#" class="link">Exploring the World, One Perfect Plan at a Time</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                <p>A little planning goes a long way. Here are the details that make a trip feel easy.</p>
                 <div class="icon">
-                    <a href="#"><i class="fas fa-clock">12 Mar,2025</i></a>
-                    <a href="#"><i class="fas fa-user"> By Admin</i></a>
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 12 Mar, 2025</span>
+                    <span><i class="fas fa-user" aria-hidden="true"></i> Travel Genie</span>
                 </div>
             </div>
         </div>
         <div class="box">
             <div class="image">
-                <img src="images/blog3.png" alt="">
+                <img src="images/blog3.png" alt="A traveller looking out across a quiet lake">
             </div>
             <div class="content">
                 <a href="#" class="link">We Came for a Vacation, Left with Memories</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                <p>The best souvenirs aren't things. They're the stories you get to bring home.</p>
                 <div class="icon">
-                    <a href="#"><i class="fas fa-clock">12 Mar,2025</i></a>
-                    <a href="#"><i class="fas fa-user"> By Admin</i></a>
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 12 Mar, 2025</span>
+                    <span><i class="fas fa-user" aria-hidden="true"></i> Travel Genie</span>
                 </div>
             </div>
         </div>
@@ -264,6 +342,12 @@
 
 
 </section>
+
+<footer class="footer">
+    <a href="#home" class="logo"><img src="genie.png" alt="">Travel<span>Genie</span></a>
+    <p>Go well. Come back different.</p>
+    <a href="#home" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+</footer>
 
 </body>
 </html>
